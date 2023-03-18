@@ -36,7 +36,7 @@ ls ${DIR} | while read box; do
     HR_BOXLIMIT=`hr $BOXLIMIT`
 
     if [ $(echo "${PERCENT} >= ${THRESHOLD}" | bc) -eq 1 ]; then
-      echo "${BOXNAME} ${PERCENT}% (${HR_BOXSIZE}/${HR_BOXLIMIT})"
+      echo "${box} ${PERCENT}% (${HR_BOXSIZE}/${HR_BOXLIMIT})"
     fi
   fi
 done
